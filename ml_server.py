@@ -20,7 +20,7 @@ x_test = x_test / 255.
 def get_prediction():
     index = np.random.choice(x_test.shape[0])
     image = x_test[index, :, :]
-    image_arr = np.reshape(iamge, (1,784))
+    image_arr = np.reshape(image, (1,784))
     return feature_model.predict(image_arr), image
     
 @app.route('/', methods=['GET','POST'])
