@@ -1,4 +1,3 @@
-
 import json
 import tensorflow as tf
 import numpy as np
@@ -8,7 +7,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('./model.h5')
 feature_model = tf.keras.models.Model(
     model.input,
     [layer.output for layer in model.layers]
